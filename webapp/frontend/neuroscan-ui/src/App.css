@@ -1,0 +1,354 @@
+
+/* NEUROSCAN AI - WEBSITE STYLING */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #eaf2ff;
+  background: #080f1e;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #080f1e;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #243249;
+  background: #0d1729;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.brand span:last-child {
+  color: #55c7f7;
+}
+
+.brand-icon {
+  color: #55c7f7;
+  margin-right: 8px;
+}
+
+.nav-label {
+  color: #92a7c4;
+  font-size: 13px;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 60px 28px;
+  flex: 1;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.eyebrow {
+  color: #55c7f7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  color: #a0b0c9;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* TWO-COLUMN WORKSPACE */
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.panel {
+  background: #111e33;
+  border: 1px solid #263852;
+  border-radius: 18px;
+  padding: 30px;
+  min-height: 440px;
+}
+
+.panel h2 {
+  font-size: 21px;
+  margin: 0 0 10px;
+}
+
+.panel-description {
+  color: #95a9c5;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* MRI UPLOAD */
+
+.upload-zone {
+  min-height: 245px;
+  border: 2px dashed #3b5779;
+  background: #0b1628;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.upload-zone:hover {
+  border-color: #55c7f7;
+  background: #10243c;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 25px;
+}
+
+.upload-symbol {
+  font-size: 46px;
+  color: #55c7f7;
+}
+
+.upload-placeholder strong {
+  font-size: 16px;
+}
+
+.upload-placeholder span {
+  font-size: 13px;
+  color: #8da4c1;
+}
+
+.mri-preview {
+  width: 100%;
+  height: 245px;
+  object-fit: contain;
+}
+
+.filename {
+  color: #9db1ce;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.analyze-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px;
+  background: #319bdc;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: #52b8f5;
+}
+
+.analyze-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff9292;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* RESULTS PANEL */
+
+.empty-results {
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.empty-symbol {
+  font-size: 48px;
+  color: #47759c;
+  margin-bottom: 15px;
+}
+
+.empty-results h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.empty-results p {
+  color: #8fa5c3;
+  max-width: 290px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.prediction-card {
+  background: #0c2940;
+  border: 1px solid #265879;
+  border-radius: 13px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.prediction-card > span {
+  color: #9fc5df;
+  font-size: 13px;
+}
+
+.prediction-card h3 {
+  font-size: 24px;
+  margin: 12px 0;
+  color: #eaf7ff;
+  overflow-wrap: anywhere;
+}
+
+.confidence {
+  font-size: 32px;
+  font-weight: 750;
+  color: #55c7f7;
+}
+
+.prediction-card small {
+  color: #93b3cb;
+}
+
+.scores-heading {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.score-row {
+  margin-bottom: 18px;
+}
+
+.score-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.progress-track {
+  height: 10px;
+  background: #293950;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #6685a8;
+  border-radius: 10px;
+  transition: width 0.4s;
+}
+
+.progress-fill.selected {
+  background: #55c7f7;
+}
+
+/* DISCLAIMER AND FOOTER */
+
+.disclaimer {
+  margin-top: 30px;
+  background: #152236;
+  border: 1px solid #344660;
+  border-radius: 12px;
+  padding: 20px;
+  color: #aebed2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.disclaimer strong {
+  color: #e7f1ff;
+}
+
+.footer {
+  padding: 24px;
+  border-top: 1px solid #243249;
+  text-align: center;
+  color: #7990ae;
+  font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 35px 18px;
+  }
+
+  .panel {
+    padding: 22px;
+    min-height: auto;
+  }
+
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .nav-label {
+    display: none;
+  }
+}

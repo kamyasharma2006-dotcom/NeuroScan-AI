@@ -1,0 +1,38 @@
+
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# MRI datasets and test images
+data/
+external_images/
+results/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+
+# Training checkpoints and temporary models
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+
+# Include the final CNN model for deployment
+!models/
+!models/cnn_v2_trained.keras
+  
